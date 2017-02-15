@@ -41,7 +41,7 @@ gulp.task('scripts', function() {
 });
 
 // Start a server with LiveReload to preview the site in
-gulp.task('server', function(){
+gulp.task('browser-sync', ['sass'],  function(){
     browserSync.init({
         server: {
             baseDir: "build"
@@ -61,10 +61,9 @@ gulp.task('build', ['sass', 'scripts']);
 // Run builds, run the server, and watch for file changes
 gulp.task('default', ['build']);
 
-gulp.task('serve', ['sass'], function(){
-    browserSync.init({
-        server: "./build"
-    });
+gulp.task('watch', ['browser-sync'], function(){
     gulp.watch('src/sass/**/*.scss', ['sass']);
     gulp.watch('src/js/**/*.js', ['scripts']);
+    gulp.watch("build/*.html").on('change', browserSync.reload);
 })
+
