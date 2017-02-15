@@ -1,0 +1,24 @@
+{
+  "name": "simple-static",
+  "version": "0.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "postinstall": "node_modules/.bin/bower install"
+  },
+  "author": "Tom Rishworth",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "bower": "*",
+    "browser-sync": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-concat": "*",
+    "gulp-notify": "*",
+    "gulp-plumber": "*",
+    "gulp-sass": "*",
+    "gulp-sass-glob": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-rename": "*"
+  }
+}
